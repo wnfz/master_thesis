@@ -3,12 +3,19 @@
 %%%%% electrodes in each file
 tic
 clear; clc;
-% Path to the folder where the files are stored --> iterate over both Control and LSD file
+
+% Path to the folder where the files are stored --> Iterate over both Control and LSD file
 % Prompt user for the path to the Control folder
 folder_path_control = input('Enter the path to the Control folder (e.g., */Control_data/RAW/TS): ', 's');
 
 % Prompt user for the path to the LSD folder
 folder_path_lsd = input('Enter the path to the LSD folder (e.g., */LSD_data/RAW_LSD/TS): ', 's');
+
+% Check if folders exist
+if ~isfolder(folder_path_control) || ~isfolder(folder_path_lsd)
+    disp('Folders do not exist. Aborting.');
+    return;
+end
 
 % Read all data ending with _RAW_TS.mat for Control
 file_list_control = dir(fullfile(folder_path_control, '*_RAW_TS.mat'));
@@ -49,7 +56,7 @@ for i = 1:numel(file_list_lsd)
     file_parts_lsd = strsplit(file_list_lsd(i).name, '_');
     well_name_lsd = file_parts_lsd{end - 2};
     
-    % Calculate the sum of temp.SPIKEZ.N
+    % Calculate the sum of temp.SPIKEZ.N (= sum of spikes calculated for each well with DrCell)
     spikes_sum_lsd = sum(temp.SPIKEZ.N);
     
     % Save well_name and sum in result_list_lsd
