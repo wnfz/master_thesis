@@ -54,10 +54,11 @@ grid on;
 
 % Create an output folder in the same path as neuralMetrics_AxionData
 output_folder = fullfile(fileparts(folder_path_1), [date_of_experiment '_TS']); % Change if SWTTEO algorithm was used to _TS_SWTEO
+%output_folder = fullfile(fileparts(folder_path_1), [date_of_experiment '_TS_SWTEO']);
 if ~exist(output_folder, 'dir')
     mkdir(output_folder);
 end
 % Save the chart as a PDF file in the output folder
-output_file = fullfile(output_folder, ['Comparison_Axion_DrCell_' upper(file_type) '.pdf']); % Use specified file type in the output file name
+output_file = fullfile(output_folder, ['Comparison_Axion_DrCell_' upper(file_type) '.pdf']); 
 saveas(gcf, output_file, 'pdf');
 toc
