@@ -16,6 +16,12 @@ folder_path_1 = input('Enter the path to the neuralMetrics_AxionData folder: ', 
 % Prompt user for the path to the TS_Control or TS_LSD folder
 folder_path_2 = input('Enter the path to the TS or TS_SWTEO folder: ', 's');
 
+% Check, if folders exist and written correctly, else break
+if ~isfolder(folder_path_1) || ~isfolder(folder_path_2)
+    disp('Folders do not exist. Aborting.');
+    return;
+end
+
 % Search for file extensions
 file_extension_1 = ['_' lower(file_type) 'spikes.csv'];
 file_extension_2 = ['_DrCell_' lower(file_type) 'spikes.csv'];
