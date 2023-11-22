@@ -58,9 +58,6 @@ for k = 1:numel(files)
             % If "Number of Spikes" is found in the line, save it and exit the loop
             number_of_spikes_line = line;
         end
-        if contains(line, 'Well Averages')
-            well_line = line;
-        end
     end
     fclose(fid);
     % Initialize the list for control spikes
