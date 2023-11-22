@@ -7,9 +7,15 @@ clear; clc;
 % Prompt user for the folder where the _neuralMetrics.csv file is located
 folder = input('Enter the folder path containing the _neuralMetrics.csv files: ', 's');
 
+% Check if the folder exists
+if ~isfolder(folder)
+    disp('Folder does not exist. Aborting.');
+    return;
+end
+
 % List all files with the ending "_neuralMetrics.csv"
 files = dir(fullfile(folder, '*_neuralMetrics.csv'));
-wells_control = {'B1', 'C6', 'D3', 'D4', 'D5', 'D6'};
+wells_control = {'B1', 'C6', 'D3', 'D4', 'D5', 'D6'}; % must be given, because not all wells without Treatment = LSD were used for control
 % Iterate over all files
 for k = 1:numel(files)
     % Current file
