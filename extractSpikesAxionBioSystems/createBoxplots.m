@@ -35,10 +35,10 @@ boxplot(boxplot_data_transposed, 'Labels', cellstr(num2str(unique(days_in_vitro)
 % Add labels to the axes
 xlabel('Days in vitro')
 ylabel('Number of spikes')
-% Speichere die aktuelle Abbildung als PDF
+% Save figure as .pdf file (change accordingly)
 saveas(gcf, 'boxplots_numSpikes.pdf')
 
-% Schließe die Abbildung
+% Close figure
 close(gcf)
 
 toc
