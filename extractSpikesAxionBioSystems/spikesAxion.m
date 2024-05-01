@@ -1,14 +1,9 @@
 tic
 clear; clc;
 
-%% This code iterates over a folder containing neuralMetrics data and extracts the number of spikes for each well and stores the results in a separate .csv.
+%% This code iterates over a folder containing neuralMetrics data and extracts the number of spikes for each well 
+%% and stores the results in a separate .csv.
 folder = input('Enter the folder path containing the _neuralMetrics.csv files: ', 's');
-
-% Check if the folder exists
-if ~isfolder(folder)
-    disp('Folder does not exist. Aborting.');
-    return;
-end
 
 % Iterate over all the files with the ending "_neuralMetrics.csv"
 files = dir(fullfile(folder, '*_neuralMetrics.csv'));
