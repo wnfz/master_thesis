@@ -29,8 +29,16 @@ boxplot_data = data{:, 2:end-1}; % Remove the first and last column
 % Transpose the boxplot_data
 boxplot_data_transposed = boxplot_data';
 
-% Plot boxplots for each day in vitro in black color
-boxplot(boxplot_data_transposed, 'Labels', cellstr(num2str(unique(days_in_vitro))), 'Colors', 'k')
+% Plot boxplots for each day in vitro with light gray fill color
+h = boxplot(boxplot_data_transposed, 'Labels', cellstr(num2str(unique(days_in_vitro))), 'Colors', 'k');
+
+% Set the face color of the boxes to light gray
+colors = repmat([0.8, 0.8, 0.8], size(h, 2), 1);
+boxes = findobj(gca, 'Tag', 'Box');
+for i = 1:numel(boxes)
+    patch(get(boxes(i), 'XData'), get(boxes(i), 'YData'), colors(i,:), 'FaceAlpha', 0.5);
+end
+set(h, {'linew'}, {1})
 
 % Add labels to the axes
 xlabel('Days in vitro')
