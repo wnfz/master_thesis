@@ -9,8 +9,8 @@ data_table = readtable(input);
 data_table = data_table(1:end-1, :);
 
 % Extract well averages and number of spikes
-well_averages = data_table{:, 'WellAverages'}; % Assuming the column name is 'WellAverages'
-number_of_spikes = data_table{:, 'NumberOfSpikes'}; % Assuming the column name is 'NumberOfSpikes'
+well_averages = data_table{:, 'WellAverages'}; 
+number_of_spikes = data_table{:, 'NumberOfSpikes'}; 
 
 % Plot the line graph with square points
 figure;
@@ -18,7 +18,7 @@ scatter(1:numel(number_of_spikes), number_of_spikes, 'Marker', 's', 'MarkerFaceC
 hold on;
 plot(1:numel(number_of_spikes), number_of_spikes, 'k', 'LineWidth', 3); % Thick line
 
-% Set x-axis ticks and labels to display "Well Averages" without cursive font
+% Set x-axis ticks and labels to display "Well Averages" 
 xticks(1:numel(number_of_spikes));
 xticklabels(well_averages);
 xtickangle(90); % Rotate labels by 90 degrees
