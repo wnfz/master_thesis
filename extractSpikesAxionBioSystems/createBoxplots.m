@@ -41,7 +41,7 @@ end
 set(h, {'linew'}, {1})
 
 % Add labels to the axes
-xlabel('Days in vitro')
+xlabel('Days {\it in vitro}')
 ylabel('Number of spikes')
 % Save figure as .pdf file (change accordingly)
 saveas(gcf, 'boxplots_numSpikes.pdf')
