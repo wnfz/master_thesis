@@ -1,4 +1,4 @@
-%% This code creates line plots with square points of all wells over time, with the number of spikes on y-axis
+%% This code creates line plots with square points of all wells over time, with the number of spikes on y-axis and time on second x-axis
 % Ask for the input file path
 input = input('Enter the file path: ', 's');
 
