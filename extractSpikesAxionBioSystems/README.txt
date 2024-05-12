@@ -5,9 +5,9 @@ For Boxplots:
 
 For Bar charts with error bars:
 
-- Run createBarCharts and give the start day as input.
+- Run createBarCharts.m and give the start day as input.
 
 For Bar charts with error bars comparing Bicuculline and Sham control data:
 
-- Load the .csv file and extract the NumberofSpikes for Bicuculline and Sham control data in two different .csv files. ! Please note: The data expects an exact time interval that needs to be adjusted, same for the wells for the data. The NumberofSpikes are normalized to the data recordings on day 1.
-- Run createBarChartBicu to create Bar charts with error bars for Bicuculline and Sham control data, plotting each next to each other for each recording time.
+- Run exractBicuSham.m and save the .csv file and extract the NumberofSpikes for Bicuculline and Sham control data in two different .csv files. ! Please note: The data expects an exact time interval that needs to be adjusted, same for the wells for the data. The NumberofSpikes are normalized to the data recordings on day 1.
+- Run createBarChartBicu.m to create Bar charts with error bars for Bicuculline and Sham control data, plotting each next to each other for each recording time.
