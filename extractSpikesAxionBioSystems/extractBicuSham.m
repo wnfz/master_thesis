@@ -7,7 +7,7 @@ tic
 clear; clc;
 
 % Load data
-input_filename = '/Users/yasserjalali/Desktop/neuralMetrics_BicucullineExperiment/combined_well_spikes.csv';
+input_filename = '/Users/yasserjalali/Desktop/neuralMetrics_BicucullineExperiment/combined_well_spikes.csv'; % Adjust accordingly!
 
 % Read data from the CSV file
 data_table = readtable(input_filename);
