@@ -2,7 +2,7 @@
 tic
 clear; clc;
 % Read file
-data = readtable('/Users/yasserjalali/Desktop/neuralMetrics_BicucullineExperiment/combined_well_bursts.csv'); %%Adjust accordingly!
+data = readtable('/Users/yasserjalali/Desktop/neuralMetrics_BicucullineExperiment/combined_well_bursts.csv'); % Adjust accordingly!
 
 % Extract the well values from the table
 well_values = data{:, 2:end};
@@ -20,8 +20,8 @@ number_of_spikes = cell(num_rows * num_cols, 1);
 
 % Fill the columns in the new table
 idx = 1;
-for i = 1:num_cols
-    for j = 1:num_rows
+for j = 1:num_rows
+    for i = 1:num_cols
         well_averages{idx} = [well_names{i}];
         number_of_spikes{idx} = well_values{j, i};
         idx = idx + 1;
