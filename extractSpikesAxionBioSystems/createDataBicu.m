@@ -1,4 +1,6 @@
 %% This code reads the given .csv file (from spikesAxion.m) and creates a .csv for extractBicuSham.csv
+tic
+clear; clc;
 % Read file
 data = readtable('/Users/yasserjalali/Desktop/neuralMetrics_BicucullineExperiment/combined_well_bursts.csv'); %%Adjust accordingly!
 
@@ -32,3 +34,4 @@ result.NumberOfSpikes = number_of_spikes;
 
 % Save the results to a new .csv file
 writetable(result, 'combined_bursts.csv');
+toc
