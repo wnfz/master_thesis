@@ -1,9 +1,9 @@
-tic
-clear; clc;
-
 %% This code iterates over a folder containing neuralMetrics data and extracts the number of spikes for each well 
 %% and stores the results in a separate .csv (same code will work for number of bursts, synchrony etc., 
 %% line 38 just needs to be adjusted.)
+
+tic
+clear; clc;
 
 % Prompt asking for folder containing all neuralMetrics data
 folder = input('Enter the folder path containing the _neuralMetrics.csv files: ', 's');
