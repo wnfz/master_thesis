@@ -28,7 +28,7 @@ end
 
 % Add the columns to the new table
 result.WellAverages = well_averages;
-result.NumberofSpikes = number_of_spikes;
+result.NumberOfSpikes = number_of_spikes;
 
 % Save the results to a new .csv file
 writetable(result, 'combined_bursts.csv');
