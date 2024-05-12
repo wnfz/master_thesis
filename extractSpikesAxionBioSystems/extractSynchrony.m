@@ -1,6 +1,8 @@
+%% This code creates synchrony metric line plots with error bars.
+tic
 clc; clear;
-% Read data from CSV file
-data = readtable('/Users/yasserjalali/Desktop/neuralMetrics/combined_well_spikes_synchrony.csv', 'ReadVariableNames', false);
+% Read data from .csv file
+data = readtable('/Users/yasserjalali/Desktop/neuralMetrics/combined_well_spikes_synchrony.csv', 'ReadVariableNames', false); %% Change accordingly!
 dates = data{:, 1};
 all_dates_str = cellstr(num2str(dates, '%08d'));
 synchrony_data = table2array(data(:, 2:end)); 
@@ -28,7 +30,7 @@ end
 figure;
 hold on;
 errorbar(unique_days, mean_spikes, sem_spikes, 'ko-', 'LineWidth', 1.6);
-xlabel('Days {\it in vitro}', 'FontSize', 24, 'FontName', 'Arial');
+xlabel('Days of electrical activity', 'FontSize', 24, 'FontName', 'Arial');
 ylabel('Area under normalized cross-correlation', 'FontSize', 24, 'FontName', 'Arial');
 set(gca, 'FontSize', 24, 'FontName', 'Arial');
 
@@ -42,3 +44,4 @@ hold off;
 
 % Set x-axis as custom labels
 xticks(unique_days);
+toc
