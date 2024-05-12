@@ -12,5 +12,8 @@ For Bar charts with error bars:
 
 For Bar charts with error bars comparing Bicuculline and Sham control data:
 
+- Run createDataBicu.m to convert .csv file.
+
 - Run exractBicuSham.m and save the .csv file and extract the NumberofSpikes for Bicuculline and Sham control data in two different .csv files. ! Please note: The data expects an exact time interval that needs to be adjusted, same for the wells for the data. The NumberofSpikes are normalized to the data recordings on day 1.
+
 - Run createBarChartBicu.m to create Bar charts with error bars for Bicuculline and Sham control data, plotting each next to each other for each recording time.
