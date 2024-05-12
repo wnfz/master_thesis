@@ -1,5 +1,8 @@
 First step for all codes: Run spikesAxion.m – The code creates a .csv file with all wells in the header, the date the experiment was conducted, and the number of spikes given in the files.
 
+For Synchrony plot:
+- Run extractSynchrony.m to create line plots with error bars for the synchrony metrics Area Under Normalized Cross-Correlation.
+
 For Boxplots: 
 - Load the .csv file in createBoxplots.m and give the starting date (= first day after plating). You will get a boxplot with the Number of spikes on the y-axis and the days in vitro on the x-axis (saved as .pdf file).
 
