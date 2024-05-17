@@ -1,6 +1,6 @@
 %% This code changes the settings for the raster plot generated using neuralMetrics Tool (save raster plot to .fig)
 % % Change to correct .fig file
-hfig = openfig('001.fig');
+hfig = openfig('000.fig');
 
 % Accessing the axes of the opened figure
 hax = gca;
