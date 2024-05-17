@@ -9,7 +9,7 @@ hax = gca;
 hax.FontName = 'Arial';
 
 % Changing the font size of the axis labels
-hax.FontSize = 24; % Replace 24 with the desired font size
+hax.FontSize = 24; 
 
 % Changing the line width to 1
 hLines = findall(hax, 'Type', 'Line'); % Find all lines in the axes
@@ -20,7 +20,7 @@ for i = 1:numel(hLines)
     % Changing the line width
     hLines(i).LineWidth = lineWidth;
     
-    % Getting the X and Y data of the line
+    % Getting the x and y data of the line
     xData = hLines(i).XData;
     yData = hLines(i).YData;
     
