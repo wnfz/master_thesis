@@ -41,13 +41,13 @@ for i = 1:numel(hLines)
     hLines(i).YData = yDataNew;
 end
 
-% Enabling secondary (minor) X tick marks
+% Enabling secondary (minor) x tick marks
 hax.XMinorTick = 'on';
 
-% Ensuring the Y-axis is visible
+% Ensuring the y-axis is visible
 hax.YColor = 'k'; % Set the Y-axis color to black
 
-% Explicitly adding Y-axis label
+% Adding y-axis label
 ylabel(hax, 'Active Electrodes', 'FontSize', 24, 'FontName', 'Arial');
 
 % Updating the figure
